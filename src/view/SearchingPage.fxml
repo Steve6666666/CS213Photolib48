@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Author: XiYue Zhang, ChuXu Song -->
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<TitledPane alignment="CENTER" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Searching Page" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.searchController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Button fx:id="Search" layoutX="435.0" layoutY="274.0" mnemonicParsing="false" onAction="#setSearch" text="Search" />
+            <ListView fx:id="listview" layoutX="24.0" layoutY="36.0" prefHeight="229.0" prefWidth="285.0" />
+            <Button fx:id="Create" disable="true" layoutX="24.0" layoutY="294.0" mnemonicParsing="false" onAction="#create" text="Create Album with Search" />
+            <Button fx:id="Cancel" layoutX="522.0" layoutY="330.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+            <TextField fx:id="Date1" layoutX="365.0" layoutY="49.0" prefHeight="23.0" prefWidth="80.0" promptText="xxxx-xx-xx" />
+            <TextField fx:id="Date2" layoutX="503.0" layoutY="49.0" prefHeight="23.0" prefWidth="80.0" promptText="xxxx-xx-xx" />
+            <Text layoutX="463.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" to" wrappingWidth="28.599609375" />
+            <ComboBox fx:id="comboBox" nodeOrientation="LEFT_TO_RIGHT" layoutX="400.0" layoutY="180.0" prefWidth="100.0" promptText="AND/OR" >
+                <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="And" />
+                            <String fx:value="Or" />
+                        </FXCollections>
+                </items>
+            </ComboBox>
+            <TextField fx:id="key1" layoutX="364.0" layoutY="137.0" prefHeight="23.0" prefWidth="88.0" promptText="key1" />
+            <TextField fx:id="value1" layoutX="482.0" layoutY="137.0" prefHeight="23.0" prefWidth="88.0" promptText="value1" />
+            <TextField fx:id="key2" layoutX="365.0" layoutY="231.0" prefHeight="23.0" prefWidth="88.0" promptText="key2" />
+            <TextField fx:id="value2" layoutX="482.0" layoutY="231.0" prefHeight="23.0" prefWidth="88.0" promptText="value2" />
+            <TextField fx:id="newName" layoutX="216.0" layoutY="294.0" prefHeight="27.0" prefWidth="103.0" promptText="Album Name:" />
+            <Text layoutX="332.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Range:" />
+            <Text layoutX="334.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag 1:" />
+            <Text layoutX="333.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag 2:" />
+            <Text layoutX="463.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+            <Text layoutX="466.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>

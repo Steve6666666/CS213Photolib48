@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Author: XiYue Zhang, ChuXu Song -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.photoEditController">
+   <children>
+      <TextField fx:id="newCaption" layoutX="97.0" layoutY="20.0" promptText="New Caption" />
+      <Text layoutX="36.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Tag list" wrappingWidth="121.470703125" />
+      <Button fx:id="add1" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" onAction="#setAdd1" text="CAP/RECAP" />
+      <TextField fx:id="tagKey" layoutX="83.0" layoutY="85.0" prefHeight="23.0" prefWidth="70.0" promptText="Tag key" />
+      <Button fx:id="add2" layoutX="275.0" layoutY="85.0" mnemonicParsing="false" onAction="#setAdd2" text="ADD TAG" />
+      <Button fx:id="delete" layoutX="34.0" layoutY="337.0" mnemonicParsing="false" onAction="#setDelete" text="DELETE TAG" />
+      <TextField fx:id="tagValue" layoutX="180.0" layoutY="85.0" prefHeight="27.0" prefWidth="79.0" promptText="Tag value" />
+      <Text layoutX="43.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" />
+      <Button fx:id="back" layoutX="337.0" layoutY="337.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="58.0" text="Back" />
+      <ListView fx:id="possibleKeylist" layoutX="35.0" layoutY="246.0" prefHeight="85.0" prefWidth="167.0" />
+      <Text fill="#110ad7" layoutX="24.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Choose a tag type from the list or enter your own tag type)" wrappingWidth="386.240234375">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="160.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="8.0" />
+      <Text layoutX="35.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caption" />
+      <ListView fx:id="preset" layoutX="83.0" layoutY="113.0" prefHeight="94.0" prefWidth="91.0" />
+   </children>
+</Pane>
